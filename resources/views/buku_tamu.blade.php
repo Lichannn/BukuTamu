@@ -13,14 +13,13 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/773px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Themify Icons -->
     <link rel="stylesheet" href="css/themify-icons.css">
     <!-- Owl carousel -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -316,7 +315,43 @@
     <!-- // end .section -->
 
     <div class="section">
-        
+        <div class="container">
+            <div class="section-title">
+                <small>BUKU TAMU</small>
+                <h3>Buku Tamu Badan Pusat Statistik Kota Bandar Lampung</h3>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nama</span>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+              
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Gmail" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nomor Telepon</span>
+                <input type="number" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+              
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Pekerjaan</span>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Alamat</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text">Kegiatan</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+
+        </div>
+
     </div>
 
 
