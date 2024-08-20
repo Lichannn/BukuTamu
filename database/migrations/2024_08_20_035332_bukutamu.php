@@ -31,6 +31,9 @@ return new class extends Migration
             $table->string('foto');
             $table->timestamps();
         });
+        Schema::table('buku_tamu', function (Blueprint $table) {
+            $table->renameColumn('tujuan', 'prihal');
+        });
     }
 
     /**

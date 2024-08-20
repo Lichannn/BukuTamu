@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -321,34 +321,96 @@
                 <h3>Buku Tamu Badan Pusat Statistik Kota Bandar Lampung</h3>
             </div>
 
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Nama</span>
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
+            <div class="formbold-main-wrapper">
+                <!-- Author: FormBold Team -->
+                <!-- Learn More: https://formbold.com -->
+                <div class="formbold-form-wrapper">
+                  <form action="#" method="POST">
+                      <div class="formbold-input-flex">
+                        <div>
+                            <input
+                            type="text"
+                            name="firstname"
+                            id="firstname"
+                            placeholder="Jane"
+                            class="formbold-form-input"
+                            />
+                            <label for="firstname" class="formbold-form-label"> Nama Depan </label>
+                        </div>
+                        <div>
+                            <input
+                            type="text"
+                            name="lastname"
+                            id="lastname"
+                            placeholder="Cooper"
+                            class="formbold-form-input"
+                            />
+                            <label for="lastname" class="formbold-form-label"> Nama Belakang </label>
+                        </div>
+                      </div>
               
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Gmail" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <span class="input-group-text" id="basic-addon2">@gmail.com</span>
-            </div>
+                      <div class="formbold-input-flex">
+                        <div>
+                            <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="bps1871@mail.com"
+                            class="formbold-form-input"
+                            />
+                            <label for="email" class="formbold-form-label"> Email </label>
+                        </div>
+                        <div>
+                            <input
+                            type="number"
+                            name="phone"
+                            id="phone"
+                            placeholder="081234567890"
+                            class="formbold-form-input"
+                            />
+                            <label for="phone" class="formbold-form-label"> Nomor Telepon </label>
+                        </div>
+                      </div>
+                    <div class="formbold-input-flex">
+                      <div>
+                          <input
+                          type="text"
+                          name="Address"
+                          id="Address"
+                          placeholder="Alamat"
+                          class="formbold-form-input"
+                          />
+                          <label for="phone" class="formbold-form-label"> Alamat </label>
+                      </div>
 
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Nomor Telepon</span>
-                <input type="number" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
+                      <div>
+                          <input
+                          type="text"
+                          name="Address"
+                          id="Address"
+                          placeholder="Prihal"
+                          class="formbold-form-input"
+                          />
+                          <label for="phone" class="formbold-form-label"> Prihal </label>
+                      </div>
+                    </div>
+                      <div class="formbold-textarea">
+                          <textarea
+                              rows="6"
+                              name="message"
+                              id="message"
+                              placeholder="Write your message..."
+                              class="formbold-form-input"
+                          ></textarea>
+                          <label for="message" class="formbold-form-label"> Kegiatan </label>
+                      </div>
               
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Pekerjaan</span>
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-
-            <div class="input-group mb-3">
-                <span class="input-group-text">Alamat</span>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
-            </div>
-            <div class="input-group">
-                <span class="input-group-text">Kegiatan</span>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
-            </div>
+                      <button class="formbold-btn">
+                          Send Message
+                      </button>
+                  </form>
+                </div>
+              </div>
 
         </div>
 
