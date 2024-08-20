@@ -18,7 +18,7 @@ return new class extends Migration
             $table->char('no_tlp', length: 14);
             $table->text('alamat');
             $table->text('kegiatan');
-            $table->text('tujuan');
+            $table->text('prihal');
             $table->string('pekerjaan');
             $table->timestamps();
         });
@@ -31,9 +31,10 @@ return new class extends Migration
             $table->string('foto');
             $table->timestamps();
         });
-        Schema::table('buku_tamu', function (Blueprint $table) {
-            $table->renameColumn('tujuan', 'prihal');
-        });
+
+        Schema::drop('failed_jobs');
+        Schema::drop('job_batches');
+        Schema::drop('jobs');
     }
 
     /**
