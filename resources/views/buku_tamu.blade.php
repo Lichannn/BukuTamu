@@ -54,7 +54,7 @@
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
             <h1>Buku Tamu Badan Pusat Statistik Kota Bandar Lampung</h1>
-            <p class="tagline">Terima kasih atas kunjungan Anda di laman resmi Badan Pusat Statistik Kota Bandar Lampung. Silahkan Isi Buku Tamu Terlebih Dahulu<a href="#" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Buku Tamu</a></p>
+            <p class="tagline">Terima kasih atas kunjungan Anda di laman resmi Badan Pusat Statistik Kota Bandar Lampung. Silahkan Isi Buku Tamu Terlebih Dahulu<a href="#contact" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Buku Tamu</a></p>
             
         </div>
         <div class="img-holder mt-3"><img src="images/buku.png" alt="phone" class="img"></div>
@@ -314,7 +314,7 @@
     </div>
     <!-- // end .section -->
 
-    <div class="section">
+    <div class="section" id="contact">
         <div class="container">
             <div class="section-title">
                 <small>BUKU TAMU</small>
@@ -417,7 +417,7 @@
     </div>
 
 
-    <div class="light-bg py-5" id="contact">
+    <div class="light-bg py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left">
