@@ -14,12 +14,12 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/773px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png">
     <!-- Themify Icons -->
-    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="{{ asset('css/themify-icons.css')}}">
     <!-- Owl carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}">
     <!-- Main css -->
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="{{ asset('css/style.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -31,9 +31,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-dark navbar-expand-lg" style="padding: 0rem;">
-                        <a class="navbar-brand" href="index.html"><img src="images/bps.png" width="140" class="img-fluid" alt="logo"></a> 
-                        <a class="navbar-brand" href="index.html"><img src="images/akhlak.png" width="50" class="img-fluid" alt="logo"></a> 
-                        <a class="navbar-brand" href="index.html"><img src="images/berani.png" width="50" class="img-fluid" alt="logo"></a> 
+                        <a class="navbar-brand" href="index.html"><img src="{{ asset('images/bps.png')}}" width="140" class="img-fluid" alt="logo"></a> 
+                        <a class="navbar-brand" href="index.html"><img src="{{ asset('images/akhlak.png')}}" width="50" class="img-fluid" alt="logo"></a> 
+                        <a class="navbar-brand" href="index.html"><img src="{{ asset('images/berani.png')}}" width="50" class="img-fluid" alt="logo"></a> 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> 
                             <span class="navbar-toggler-icon"></span> 
                         </button>
@@ -57,7 +57,7 @@
             <p class="tagline">Terima kasih atas kunjungan Anda di laman resmi Badan Pusat Statistik Kota Bandar Lampung. Silahkan Isi Buku Tamu Terlebih Dahulu<a href="#contact" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Buku Tamu</a></p>
             
         </div>
-        <div class="img-holder mt-3"><img src="images/buku.png" alt="phone" class="img"></div>
+        <div class="img-holder mt-3"><img src="{{ asset('images/buku.png')}}" alt="phone" class="img"></div>
     </header>
 
     <div class="section light-bg" id="features">
@@ -146,7 +146,7 @@
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="communication">
                     <div class="d-flex flex-column flex-lg-row">
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <img src="{{ asset('images/graphic.png')}}" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                         <div>
 
                             <h2>Communicate with ease</h2>
@@ -172,12 +172,12 @@
                                 sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
                             </p>
                         </div>
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <img src="{{ asset('images/graphic.png')}}" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                     </div>
                 </div>
                 <div class="tab-pane fade" id="messages">
                     <div class="d-flex flex-column flex-lg-row">
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <img src="{{ asset('images/graphic.png')}}" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                         <div>
                             <h2>Realtime Messaging service</h2>
                             <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
@@ -202,7 +202,7 @@
                                 sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
                             </p>
                         </div>
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <img src="{{ asset('images/graphic.png"')}} alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                     </div>
                 </div>
             </div>
@@ -260,19 +260,19 @@
 
             <div class="testimonials owl-carousel">
                 <div class="testimonials-single">
-                    <img src="images/client.png" alt="client" class="client-img">
+                    <img src="{{ asset('images/client.png')}}" alt="client" class="client-img">
                     <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
                     <h5 class="mt-4 mb-2">Crystal Gordon</h5>
                     <p class="text-primary">United States</p>
                 </div>
                 <div class="testimonials-single">
-                    <img src="images/client.png" alt="client" class="client-img">
+                    <img src="{{ asset('images/client.png')}}" alt="client" class="client-img">
                     <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
                     <h5 class="mt-4 mb-2">Crystal Gordon</h5>
                     <p class="text-primary">United States</p>
                 </div>
                 <div class="testimonials-single">
-                    <img src="images/client.png" alt="client" class="client-img">
+                    <img src="{{ asset('images/client.png')}}" alt="client" class="client-img">
                     <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
                     <h5 class="mt-4 mb-2">Crystal Gordon</h5>
                     <p class="text-primary">United States</p>
@@ -459,12 +459,12 @@
     </footer>
 
     <!-- jQuery and Bootstrap -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js')}}"></script>
     <!-- Plugins JS -->
-    <script src="js/owl.carousel.min.js"></script>
+    <script src="{{ asset('js/owl.carousel.min.js')}}"></script>
     <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <script src="{{ asset('js/script.js')}}"></script>
 
 </body>
 
