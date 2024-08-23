@@ -11,30 +11,35 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('buku_tamu', function (Blueprint $table) {
-            $table->bigIncrements('id_buku-tamu');
-            $table->string('nama');
-            $table->string('email');
-            $table->char('no_tlp', length: 14);
-            $table->text('alamat');
-            $table->text('kegiatan');
-            $table->text('prihal');
-            $table->string('pekerjaan');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('buku_tamu')) {
+            Schema::create('buku_tamu', function (Blueprint $table) {
+                $table->bigIncrements('id_buku-tamu');
+                $table->string('nama');
+                $table->string('email');
+                $table->char('no_tlp', length: 14);
+                $table->text('alamat');
+                $table->text('kegiatan');
+                $table->text('prihal');
+                $table->string('pekerjaan');
+                $table->string('kesan');
+                $table->timestamps();
+            });
+        }
+        
+        if (!Schema::hasTable('pegawai')) {
+            Schema::create('pegawai', function (Blueprint $table) {
+                $table->bigIncrements('id_pegawai');
+                $table->string('nama');
+                $table->string('jabatan');
+                $table->string('pekerjaan');
+                $table->string('foto');
+                $table->timestamps();
+            });
+        }
 
-        Schema::create('pegawai', function (Blueprint $table) {
-            $table->bigIncrements('id_pegawai');
-            $table->string('nama');
-            $table->string('jabatan');
-            $table->string('pekerjaan');
-            $table->string('foto');
-            $table->timestamps();
+        Schema::table('buku_tamu', function (Blueprint $table) {
+            $table->string('kesan');
         });
-
-        Schema::drop('failed_jobs');
-        Schema::drop('job_batches');
-        Schema::drop('jobs');
     }
 
     /**
@@ -42,6 +47,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        
     }
 };

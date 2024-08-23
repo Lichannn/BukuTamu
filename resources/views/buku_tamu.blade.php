@@ -334,22 +334,10 @@
                             id="firstname"
                             placeholder="Jane"
                             class="formbold-form-input"
+                            required
                             />
                             <label for="firstname" class="formbold-form-label"> Nama Depan </label>
                         </div>
-                        <div>
-                            <input
-                            type="text"
-                            name="lastname"
-                            id="lastname"
-                            placeholder="Cooper"
-                            class="formbold-form-input"
-                            />
-                            <label for="lastname" class="formbold-form-label"> Nama Belakang </label>
-                        </div>
-                      </div>
-              
-                      <div class="formbold-input-flex">
                         <div>
                             <input
                             type="email"
@@ -357,9 +345,13 @@
                             id="email"
                             placeholder="bps1871@mail.com"
                             class="formbold-form-input"
+                            required
                             />
                             <label for="email" class="formbold-form-label"> Email </label>
                         </div>
+                      </div>
+              
+                      <div class="formbold-input-flex">
                         <div>
                             <input
                             type="number"
@@ -367,32 +359,46 @@
                             id="phone"
                             placeholder="081234567890"
                             class="formbold-form-input"
+                            required
                             />
                             <label for="phone" class="formbold-form-label"> Nomor Telepon </label>
                         </div>
+                        <div>
+                            <input
+                            type="text"
+                            name="Address"
+                            id="Address"
+                            placeholder="Alamat"
+                            class="formbold-form-input"
+                            required
+                            />
+                            <label for="phone" class="formbold-form-label"> Alamat </label>
+                        </div>
+
                       </div>
                     <div class="formbold-input-flex">
-                      <div>
-                          <input
-                          type="text"
-                          name="Address"
-                          id="Address"
-                          placeholder="Alamat"
-                          class="formbold-form-input"
-                          />
-                          <label for="phone" class="formbold-form-label"> Alamat </label>
-                      </div>
-
-                      <div>
-                          <input
-                          type="text"
-                          name="Address"
-                          id="Address"
-                          placeholder="Prihal"
-                          class="formbold-form-input"
-                          />
-                          <label for="phone" class="formbold-form-label"> Prihal </label>
-                      </div>
+                        <div>
+                            <input
+                            type="text"
+                            name="Address"
+                            id="Address"
+                            placeholder="Prihal"
+                            class="formbold-form-input"
+                            required
+                            />
+                            <label for="phone" class="formbold-form-label"> Kesan </label>
+                        </div>
+                        <div>
+                            <input
+                            type="text"
+                            name="Address"
+                            id="Address"
+                            placeholder="Prihal"
+                            class="formbold-form-input"
+                            required
+                            />
+                            <label for="phone" class="formbold-form-label"> Prihal </label>
+                        </div>
                     </div>
                       <div class="formbold-textarea">
                           <textarea
@@ -401,6 +407,7 @@
                               id="message"
                               placeholder="Write your message..."
                               class="formbold-form-input"
+                              required
                           ></textarea>
                           <label for="message" class="formbold-form-label"> Kegiatan </label>
                       </div>
