@@ -42,21 +42,26 @@
                 </div>
                 <h4>Hello! let's get started</h4>
                 <h6 class="font-weight-light">Sign in to continue.</h6>
-                <form class="pt-3">
+                <form class="pt-3" method="POST" action="{{ route('loginPost') }}">
+                  @csrf
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email" name="email">
+                    @if ($errors->has('email'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ $errors->first('email') }}
+                      </div>
+                    @endif
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password">
+                    @if ($errors->has('password'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ $errors->first('password') }}
+                      </div>
+                    @endif
                   </div>
                   <div class="mt-3">
-                    <a class="btn d-grid btn-primary btn-lg font-weight-medium auth-form-btn" href="#">SIGN IN</a>
-                  </div>
-                  <div class="my-2 d-flex justify-content-between align-items-center">
-                    <div class="form-check">
-                      <label class="form-check-label text-muted">
-                        <input type="checkbox" class="form-check-input"> Keep me signed in </label>
-                    </div>
+                    <button class="btn d-grid btn-primary btn-lg font-weight-medium auth-form-btn">SIGN IN</button>
                   </div>
                 </form>
               </div>

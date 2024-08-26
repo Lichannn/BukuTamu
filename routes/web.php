@@ -1,17 +1,20 @@
 <?php
 
+use App\Http\Controllers\BukuTamuController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
+
+
+Route::middleware("auth")->group(function(){
+    Route::get('admin/dashboard', [BukuTamuController::class, 'dashboardView'])->name("dashboardView");
+    Route::get('admin/register', [LoginController::class, 'registerView'])->name("register"); 
+    Route::post('admin/register', [LoginController::class, 'registerPost'])->name("registerPost"); 
+});
 
 Route::get('/', function () {
     return view('buku_tamu');
 });
-Route::get('admin/login', [LoginController::class, 'loginView'])->name("viewLogin"); 
 
-// Route::group(['middleware', 'guest'] , function () {
-    Route::get('admin/', function () {
-        return view('admin/dashboard');
-    });
-    Route::get('admin/register', [LoginController::class, 'registerView'])->name("register"); 
-    Route::post('admin/register', [LoginController::class, 'registerPost'])->name("registerPost"); 
-// });
+Route::post('admin/logout', [LoginController::class, 'logout'])->name("Logout");
+Route::get('admin/login', [LoginController::class, 'loginView'])->name("login"); 
+Route::post('admin/login', [LoginController::class, 'loginPost'])->name("loginPost");

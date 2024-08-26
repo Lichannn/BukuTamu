@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\bukuTamuModel;
+use App\Models\bukuTamu;
 use Illuminate\Http\Request;
 
-class BukuTamuModelController extends Controller
+class BukuTamuController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function dashboardView()
     {
-        //
+        return view('admin.dashboard');
     }
 
     /**
@@ -34,7 +34,7 @@ class BukuTamuModelController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(bukuTamuModel $bukuTamuModel)
+    public function show(bukuTamu $bukuTamu)
     {
         //
     }
@@ -42,7 +42,7 @@ class BukuTamuModelController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(bukuTamuModel $bukuTamuModel)
+    public function edit(bukuTamu $bukuTamu)
     {
         //
     }
@@ -50,7 +50,7 @@ class BukuTamuModelController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, bukuTamuModel $bukuTamuModel)
+    public function update(Request $request, bukuTamu $bukuTamu)
     {
         //
     }
@@ -58,7 +58,7 @@ class BukuTamuModelController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(bukuTamuModel $bukuTamuModel)
+    public function destroy(bukuTamu $bukuTamu)
     {
         //
     }

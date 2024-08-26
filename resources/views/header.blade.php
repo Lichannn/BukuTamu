@@ -50,7 +50,10 @@
                   <p class="mb-1 mt-3">Henry Klein</p>
                   <p class="font-weight-light text-muted mb-0">kleinhenry@gmail.com</p>
                 </div>
-                <a class="dropdown-item"><i class="dropdown-item-icon icon-power text-primary"></i>Sign Out</a>
+                <form action="{{ route('Logout') }}" method="POST">
+                  @csrf
+                <button class="dropdown-item"><i class="dropdown-item-icon icon-power text-primary"></i>Sign Out</button>
+                </form>
               </div>
             </li>
           </ul>
