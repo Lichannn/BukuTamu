@@ -3,36 +3,11 @@
         <div class="main-panel">
           <div class="content-wrapper">
             <div class="row">
-              <div class="col-md-8 grid-margin stretch-card">
+              <div class="col-md-8 grid-margin stretch-card"> 
                 <div class="card">
-                  <div class="card-body performane-indicator-card">
-                    <div class="d-sm-flex">
-                      <h4 class="card-title flex-shrink-1">Performance Indicator</h4>
-                      <p class="m-sm-0 ms-sm-auto flex-shrink-0">
-                        <span class="data-time-range ms-0">7d</span>
-                        <span class="data-time-range active">2w</span>
-                        <span class="data-time-range">1m</span>
-                        <span class="data-time-range">3m</span>
-                        <span class="data-time-range">6m</span>
-                      </p>
-                    </div>
-                    <div class="d-sm-flex flex-wrap mt-3">
-                      <div class="d-flex align-items-center">
-                        <span class="dot-indicator bg-primary ms-2"></span>
-                        <p class="mb-0 ms-2 text-muted font-weight-semibold">Complaints (2098)</p>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <span class="dot-indicator bg-info ms-2"></span>
-                        <p class="mb-0 ms-2 text-muted font-weight-semibold"> Task Done (1123)</p>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <span class="dot-indicator bg-danger ms-2"></span>
-                        <p class="mb-0 ms-2 text-muted font-weight-semibold">Attends (876)</p>
-                      </div>
-                    </div>
-                    <div class="dotted-chart-height">
-                      <canvas id="performance-indicator-chart" class="mt-5"></canvas>
-                    </div>
+                  <div class="card-body">
+                    <h4 class="card-title">Area chart</h4>
+                    <canvas id="areaChart" class="mt-5" style="height:250px"></canvas>
                   </div>
                 </div>
               </div>
@@ -177,32 +152,6 @@
                           <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-right"></i></a></li>
                         </ul>
                       </nav>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row income-expense-summary-chart-text">
-                      <div class="col-xl-4">
-                        <h5>Income And Expenses Summary</h5>
-                        <p class="small text-muted">A comparison of people who mark themselves of their ineterest from the date range given above. Learn more.</p>
-                      </div>
-                      <div class="col-md-6 align-items-center">
-                        <div class="input-group ms-auto" id="income-expense-summary-chart-daterange">
-                          <div class="inpu-group-prepend input-group-text"><i class="icon-calendar"></i></div>
-                          <input type="text" class="form-control">
-                          <div class="input-group-prepend input-group-text"><i class="icon-arrow-down"></i></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row income-expense-summary-chart mt-3">
-                      <div class="col-md-12">
-                        <div class="ct-chart" id="income-expense-summary-chart"></div>
-                      </div>
                     </div>
                   </div>
                 </div>

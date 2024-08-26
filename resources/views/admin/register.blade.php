@@ -27,36 +27,38 @@
             <div class="col-lg-4 mx-auto">
               <div class="auth-form-light text-left p-5">
                 <div class="brand-logo">
-                  <img src="{{ asset('images/logo-dark.svg')}}" style="padding-bottom: 15px">
-                  
-                  @if (session()->has('success'))
-                    <div class="alert alert-primary" role="alert">
-                      <strong>{{ session()->get('success') }}</strong>
-                    </div>
-                  @endif
-                  @if (session()->has('error'))
-                    <div class="alert alert-primary" role="alert">
-                      <strong>{{ session()->get('error') }}</strong>
-                    </div>
-                  @endif
+                  <img src="{{ asset('images\bps.png')}}">
                 </div>
-                <h4>Hello! let's get started</h4>
-                <h6 class="font-weight-light">Sign in to continue.</h6>
-                <form class="pt-3">
+                <h4>Tambah Admin</h4>
+                <h6 class="font-weight-light">Add up is easy. It only takes a few steps</h6>
+                <form class="pt-3" method="POST" action="{{ route('registerPost') }}">
+                 @csrf
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                    <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Nama" name="nama" value="{{ old('nama') }}">
+                    @if ($errors->has('nama'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ $errors->first('nama') }}
+                      </div>
+                    @endif
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email" name="email" value="{{ old('email') }}">
+                    @if ($errors->has('email'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ $errors->first('email') }}
+                      </div>
+                    @endif
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password" value="{{ old('password') }}"> 
+                    @if ($errors->has('password'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ $errors->first('password') }}
+                      </div>
+                    @endif
                   </div>
                   <div class="mt-3">
-                    <a class="btn d-grid btn-primary btn-lg font-weight-medium auth-form-btn" href="#">SIGN IN</a>
-                  </div>
-                  <div class="my-2 d-flex justify-content-between align-items-center">
-                    <div class="form-check">
-                      <label class="form-check-label text-muted">
-                        <input type="checkbox" class="form-check-input"> Keep me signed in </label>
-                    </div>
+                    <button class="btn d-grid btn-primary btn-lg font-weight-medium auth-form-btn" type="submit">Add</button>
                   </div>
                 </form>
               </div>
@@ -67,7 +69,7 @@
       </div>
       <!-- page-body-wrapper ends -->
     </div>
-    <!-- container-scroller -->
+   <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="{{ asset('vendors/js/vendor.bundle.base.js')}}"></script>
     <!-- endinject -->

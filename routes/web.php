@@ -1,15 +1,17 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('buku_tamu');
 });
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('admin/login', [LoginController::class, 'loginView'])->name("viewLogin"); 
 
-
-Route::get('admin/', function () {
-    return view('admin/dashboard');
-});
+// Route::group(['middleware', 'guest'] , function () {
+    Route::get('admin/', function () {
+        return view('admin/dashboard');
+    });
+    Route::get('admin/register', [LoginController::class, 'registerView'])->name("register"); 
+    Route::post('admin/register', [LoginController::class, 'registerPost'])->name("registerPost"); 
+// });

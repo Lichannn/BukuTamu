@@ -117,9 +117,9 @@ $(function() {
     }
   };
   var areaData = {
-    labels: ["2013", "2014", "2015", "2016", "2017"],
+    labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
     datasets: [{
-      label: '# of Votes',
+      label: 'Data Pengunjung',
       data: [12, 19, 3, 5, 2, 3],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',

@@ -36,6 +36,8 @@
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script src="{{ asset('js/dashboard.js')}}"></script>
+    
+    <script src="{{ asset('js/chart.js')}}"></script>
     <!-- End custom js for this page -->
   </body>
 </html>
