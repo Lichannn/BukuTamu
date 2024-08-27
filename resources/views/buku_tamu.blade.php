@@ -20,6 +20,8 @@
     <!-- Main css -->
     <link href="{{ asset('css/style.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('vendors/select2/select2.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('vendors/select2-bootstrap-theme/select2-bootstrap.min.css') }}">
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -530,6 +532,7 @@
     <!-- jQuery and Bootstrap -->
     <script src="{{ asset('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('vendors/select2/select2.min.js')}}"></script>
     <!-- Plugins JS -->
     <script src="{{ asset('js/owl.carousel.min.js')}}"></script>
     <!-- Custom JS -->

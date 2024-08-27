@@ -1,4 +1,4 @@
-@include('../header')
+@include('header')
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
@@ -74,7 +74,7 @@
                   <div class="card-body">
                     <div class="d-sm-flex align-items-center mb-4">
                       <h4 class="card-title mb-sm-0">Products Inventory</h4>
-                      <a href="#" class="text-dark ms-auto mb-3 mb-sm-0"> View all Products</a>
+                      <a href="{{ route('pegawai') }}" class="text-dark ms-auto mb-3 mb-sm-0"> View all Products</a>
                     </div>
                     <div class="table-responsive border rounded p-1">
                       <table class="table">

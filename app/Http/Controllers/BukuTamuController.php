@@ -20,7 +20,7 @@ class BukuTamuController extends Controller
      */
     public function create()
     {
-        return view('buku_tamu');
+        return view('pegawai');
     }
 
     /**

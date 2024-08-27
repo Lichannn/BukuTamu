@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="{{ asset('vendors/jvectormap/jquery-jvectormap.css')}}">
     <link rel="stylesheet" href="{{ asset('vendors/daterangepicker/daterangepicker.css')}}">
     <link rel="stylesheet" href="{{ asset('vendors/chartist/chartist.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('vendors/select2/select2.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('vendors/select2-bootstrap-theme/select2-bootstrap.min.css')}}">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
@@ -82,24 +84,17 @@
               <span class="nav-link">Dashboard</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="{{ route('dashboardView') }}">
                 <span class="menu-title">Dashboard</span>
                 <i class="icon-screen-desktop menu-icon"></i>
               </a>
             </li>
             <li class="nav-item nav-category"><span class="nav-link">More PAGES</span></li>
             <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <a class="nav-link" href="{{ route('pegawai') }}" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Pegawai</span>
                 <i class="icon-layers menu-icon"></i>
               </a>
-              <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-                </ul>
-              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#forms" aria-expanded="false" aria-controls="forms">
