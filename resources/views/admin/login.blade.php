@@ -17,7 +17,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="{{ asset('css/vertical-light-layout/style.css')}}">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png')}}" />
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/773px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png" />
   </head>
   <body>
     <div class="container-scroller">
@@ -27,7 +27,7 @@
             <div class="col-lg-4 mx-auto">
               <div class="auth-form-light text-left p-5">
                 <div class="brand-logo">
-                  <img src="{{ asset('images/logo-dark.svg')}}" style="padding-bottom: 15px">
+                  <img src="{{ asset('images/bps.png')}}" style="padding-bottom: 15px">
                   
                   @if (session()->has('success'))
                     <div class="alert alert-primary" role="alert">

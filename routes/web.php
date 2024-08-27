@@ -6,14 +6,17 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::middleware("auth")->group(function(){
-    Route::get('admin/dashboard', [BukuTamuController::class, 'dashboardView'])->name("dashboardView");
-    Route::get('admin/register', [LoginController::class, 'registerView'])->name("register"); 
-    Route::post('admin/register', [LoginController::class, 'registerPost'])->name("registerPost"); 
+        Route::get('admin/', [BukuTamuController::class, 'dashboardView'])->name("dashboardView");
+        Route::get('admin/register', [LoginController::class, 'registerView'])->name("register"); 
+        Route::post('admin/register', [LoginController::class, 'registerPost'])->name("registerPost"); 
+
 });
 
 Route::get('/', function () {
     return view('buku_tamu');
 });
+
+Route::post("/bukutamu", [BukuTamuController::class, 'store'])->name("addBT");
 
 Route::post('admin/logout', [LoginController::class, 'logout'])->name("Logout");
 Route::get('admin/login', [LoginController::class, 'loginView'])->name("login"); 

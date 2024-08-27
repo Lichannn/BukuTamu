@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Http\Request;
 class LoginController extends Controller
@@ -21,9 +20,9 @@ class LoginController extends Controller
         $user = new User;
         $user->name = $request->nama;
         $user->email = $request->email;
-        $user->password =  Hash::make($request->password);
+        $user->password =  bcrypt($request->password);
         if($user->save()) {
-            return redirect(route('login'))->with('success', 'Berhasil register, silahkan login');
+            return redirect('/')->with('success', 'Berhasil register, silahkan login');
         } else {
             return redirect('/register')->with('error', 'Gagal register, coba lagi');
         }

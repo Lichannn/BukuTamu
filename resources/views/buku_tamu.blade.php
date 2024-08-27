@@ -325,17 +325,33 @@
                 <!-- Author: FormBold Team -->
                 <!-- Learn More: https://formbold.com -->
                 <div class="formbold-form-wrapper">
-                  <form action="#" method="POST">
+                  <form action="{{ route('addBT') }}" method="POST">
+                    @csrf
+                    @if (session()->has('success'))
+                    <div class="alert alert-primary" role="alert">
+                        {{ session()->get('success') }}
+                    </div>
+                    @endif
+                    @if (session()->has('error'))
+                    <div class="alert alert-primary" role="alert">
+                        {{ session()->get('error') }}
+                    </div>
+                    @endif
                       <div class="formbold-input-flex">
                         <div>
                             <input
                             type="text"
-                            name="firstname"
+                            name="nama"
                             id="firstname"
                             placeholder="Jane"
                             class="formbold-form-input"
-                            required
+                            value="{{ old('nama') }}"
                             />
+                            @if ($errors->has('nama'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ $errors->first('nama') }}
+                            </div>
+                            @endif
                             <label for="firstname" class="formbold-form-label"> Nama Depan </label>
                         </div>
                         <div>
@@ -345,8 +361,13 @@
                             id="email"
                             placeholder="bps1871@mail.com"
                             class="formbold-form-input"
-                            required
+                            value="{{ old('email') }}"
                             />
+                            @if ($errors->has('email'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ $errors->first('email') }}
+                            </div>
+                            @endif
                             <label for="email" class="formbold-form-label"> Email </label>
                         </div>
                       </div>
@@ -355,23 +376,33 @@
                         <div>
                             <input
                             type="number"
-                            name="phone"
+                            name="no_tlp"
                             id="phone"
-                            placeholder="081234567890"
+                            placeholder="+62"
                             class="formbold-form-input"
-                            required
+                            value="{{ old('no_tlp') }}"
                             />
+                            @if ($errors->has('no_tlp'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ $errors->first('no_tlp') }}
+                            </div>
+                            @endif
                             <label for="phone" class="formbold-form-label"> Nomor Telepon </label>
                         </div>
                         <div>
                             <input
                             type="text"
-                            name="Address"
+                            name="alamat"
                             id="Address"
                             placeholder="Alamat"
                             class="formbold-form-input"
-                            required
+                            value="{{ old('alamat') }}"
                             />
+                            @if ($errors->has('alamat'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ $errors->first('alamat') }}
+                            </div>
+                            @endif
                             <label for="phone" class="formbold-form-label"> Alamat </label>
                         </div>
 
@@ -380,35 +411,66 @@
                         <div>
                             <input
                             type="text"
-                            name="Address"
+                            name="kesan"
                             id="Address"
-                            placeholder="Prihal"
+                            placeholder="kesan"
                             class="formbold-form-input"
-                            required
+                            value="{{ old('kesan') }}"
                             />
+                            @if ($errors->has('kesan'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ $errors->first('kesan') }}
+                            </div>
+                            @endif
                             <label for="phone" class="formbold-form-label"> Kesan </label>
                         </div>
                         <div>
                             <input
                             type="text"
-                            name="Address"
+                            name="prihal"
                             id="Address"
                             placeholder="Prihal"
                             class="formbold-form-input"
-                            required
+                            value="{{ old('prihal') }}"
                             />
+                            @if ($errors->has('prihal'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ $errors->first('prihal') }}
+                            </div>
+                            @endif
                             <label for="phone" class="formbold-form-label"> Prihal </label>
                         </div>
                     </div>
+                        <div>
+                            <label for="phone" class="formbold-form-label"> Pekerjaan </label>
+                            <input
+                            type="text"
+                            name="pekerjaan"
+                            id="Address"
+                            placeholder="pekerjaan"
+                            class="formbold-form-input"
+                            value="{{ old('pekerjaan') }}"
+                            />
+                            @if ($errors->has('pekerjaan'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ $errors->first('pekerjaan') }}
+                            </div>
+                            @endif
+                        </div>
                       <div class="formbold-textarea">
                           <textarea
                               rows="6"
-                              name="message"
+                              name="kegiatan"
                               id="message"
                               placeholder="Write your message..."
                               class="formbold-form-input"
-                              required
+                              value="{{ old('kegiatan') }}"
                           ></textarea>
+                          @if ($errors->has('kegiatan'))
+                          <div class="alert alert-danger" role="alert">
+                              {{ $errors->first('kegiatan') }}
+                          </div>
+                          @endif
                           <label for="message" class="formbold-form-label"> Kegiatan </label>
                       </div>
               
