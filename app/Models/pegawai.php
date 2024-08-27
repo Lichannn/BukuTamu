@@ -18,4 +18,6 @@ class pegawai extends Model
     ];
 
     protected $table = 'pegawai';
+
+    protected $primaryKey = 'id_pegawai';
 }

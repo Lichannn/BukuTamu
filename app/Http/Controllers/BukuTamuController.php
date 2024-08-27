@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\buku_tamu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BukuTamuController extends Controller
 {
@@ -12,7 +13,8 @@ class BukuTamuController extends Controller
      */
     public function dashboardView()
     {
-        return view('admin.dashboard');
+        $pegawai = DB::table('pegawai')->paginate(5);
+        return view('admin.dashboard', ['pegawai' => $pegawai]);
     }
 
     /**

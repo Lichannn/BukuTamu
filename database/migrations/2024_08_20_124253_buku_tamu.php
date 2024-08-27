@@ -38,7 +38,7 @@ return new class extends Migration
         }
 
         Schema::table('buku_tamu', function (Blueprint $table) {
-            $table->string('kesan');
+            $table->string('foto')->nullable();
         });
     }
 

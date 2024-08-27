@@ -7,10 +7,11 @@
         <div class="col-12 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Tambah Pegawai</h4>
+              <h4 class="card-title">Edit Pegawai</h4>
               <p class="card-description"> Pegawai BPS Kota Bandar Lampung </p>
-              <form class="forms-sample" action="{{route('addPegawaiStore')}}" method="POST" enctype="multipart/form-data">
+              <form class="forms-sample" action="{{ route('editPegawaiUpdate',$pegawai->id_pegawai) }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div class="form-group">
                     @if ($errors->has('nama'))
                     <div class="alert alert-danger" role="alert">
@@ -18,7 +19,7 @@
                       </div>
                     @endif
                   <label for="exampleInputName1">Nama</label>
-                  <input type="text" class="form-control" id="exampleInputName1" placeholder="Nama" name="nama">
+                  <input type="text" class="form-control" id="exampleInputName1" placeholder="Nama" name="nama" value="{{ $pegawai->nama }}">
                 </div>
                 <div class="form-group">
                     @if ($errors->has('jabatan'))
@@ -27,7 +28,7 @@
                       </div>
                     @endif
                   <label for="exampleInputEmail3">Jabatan</label>
-                  <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Jabatan" name="jabatan">
+                  <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Jabatan" name="jabatan" value="{{ $pegawai->jabatan }}">
                 </div>
                 <div class="form-group">
                     @if ($errors->has('pekerjaan'))
@@ -36,7 +37,8 @@
                       </div>
                     @endif
                   <label for="exampleSelectGender">Tim Kerja</label>
-                  <select class="form-select" id="exampleSelectGender" name="pekerjaan">
+                  <select class="form-select" id="exampleSelectGender" name="pekerjaan" >
+                    <option value="{{ $pegawai->pekerjaan }}">{{ $pegawai->pekerjaan }}</option>
                     <option value="exKSK">exKSK</option>
                     <option value="Umum">Umum</option>
                     <option value="IPDS">IPDS</option>

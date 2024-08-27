@@ -73,83 +73,44 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="d-sm-flex align-items-center mb-4">
-                      <h4 class="card-title mb-sm-0">Products Inventory</h4>
-                      <a href="{{ route('pegawai') }}" class="text-dark ms-auto mb-3 mb-sm-0"> View all Products</a>
+                      <h4 class="card-title mb-sm-0">Data Pegawai</h4>
+                      <a href="{{ route('pegawai') }}" class="text-dark ms-auto mb-3 mb-sm-0"> View all Pegawai</a>
                     </div>
                     <div class="table-responsive border rounded p-1">
                       <table class="table">
                         <thead>
                           <tr>
-                            <th class="font-weight-bold">Store ID</th>
-                            <th class="font-weight-bold">Amount</th>
-                            <th class="font-weight-bold">Gateway</th>
-                            <th class="font-weight-bold">Created at</th>
-                            <th class="font-weight-bold">Paid at</th>
+                            <th class="font-weight-bold">Nama</th>
+                            <th class="font-weight-bold">Jabatan</th>
+                            <th class="font-weight-bold">Tim Kerja</th>
+                            <th class="font-weight-bold">Foto</th>
                             <th class="font-weight-bold">Status</th>
                           </tr>
                         </thead>
                         <tbody>
+                          @foreach ($pegawai as $key => $value)
                           <tr>
                             <td>
-                              <img class="img-sm rounded-circle" src="{{ asset('images/faces/face1.jpg')}}" alt="profile image"> Katie Holmes
+                              {{$value->nama}}
                             </td>
-                            <td>$3621</td>
-                            <td><img src="{{ asset('images/dashboard/alipay.png')}}" alt="alipay" class="gateway-icon me-2"> alipay</td>
-                            <td>04 Jun 2019</td>
-                            <td>18 Jul 2019</td>
+                            <td>{{ $value->jabatan }}</td>
+                            <td>{{ $value->pekerjaan }}</td>
+                            <td><img class="img-sm rounded-circle" src="{{ asset('images/faces/'.$value->foto)}}" alt="profile image"></td>
                             <td>
-                              <div class="badge badge-success p-2">Paid</div>
+                              <div class="badge badge-primary p-2">Paid</div>
+                              <div class="badge badge-danger p-2">Paid</div>
+                              <div class="badge badge-info p-2">Paid</div>
                             </td>
                           </tr>
-                          <tr>
-                            <td>
-                              <img class="img-sm rounded-circle" src="{{ asset('images/faces/face2.jpg')}}" alt="profile image"> Minnie Copeland
-                            </td>
-                            <td>$6245</td>
-                            <td><img src="{{ asset('images/dashboard/paypal.png')}}" alt="alipay" class="gateway-icon me-2"> Paypal</td>
-                            <td>25 Sep 2019</td>
-                            <td>07 Oct 2019</td>
-                            <td>
-                              <div class="badge badge-danger p-2">Pending</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img class="img-sm rounded-circle" src="{{ asset('images/faces/face3.jpg')}}" alt="profile image"> Rodney Sims
-                            </td>
-                            <td>$9265</td>
-                            <td><img src="{{ asset('images/dashboard/alipay.png')}}" alt="alipay" class="gateway-icon me-2"> alipay</td>
-                            <td>12 dec 2019</td>
-                            <td>26 Aug 2019</td>
-                            <td>
-                              <div class="badge badge-warning p-2">Failed</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img class="img-sm rounded-circle" src="{{ asset('images/faces/face4.jpg')}}" alt="profile image"> Carolyn Barker
-                            </td>
-                            <td>$2263</td>
-                            <td><img src="{{ asset('images/dashboard/alipay.png')}}" alt="alipay" class="gateway-icon me-2"> alipay</td>
-                            <td>30 Sep 2019</td>
-                            <td>20 Oct 2019</td>
-                            <td>
-                              <div class="badge badge-success p-2">Paid</div>
-                            </td>
-                          </tr>
+                          @endforeach
                         </tbody>
                       </table>
                     </div>
                     <div class="d-flex mt-4 flex-wrap align-items-center">
-                      <p class="text-muted mb-sm-0">Showing 1 to 10 of 57 entries</p>
+                      <p class="text-muted mb-sm-0">Showing {{$pegawai->firstItem()}} to {{ $pegawai->lastItem() }} of {{ $pegawai->total() }} entries</p>
                       <nav class="ms-auto">
                         <ul class="pagination separated pagination-info mb-sm-0">
-                          <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-left"></i></a></li>
-                          <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                          <li class="page-item"><a href="#" class="page-link">2</a></li>
-                          <li class="page-item"><a href="#" class="page-link">3</a></li>
-                          <li class="page-item"><a href="#" class="page-link">4</a></li>
-                          <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-right"></i></a></li>
+                          {{$pegawai->links()}}
                         </ul>
                       </nav>
                     </div>
