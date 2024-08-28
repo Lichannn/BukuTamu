@@ -85,17 +85,15 @@
 
     var circle = new ProgressBar.Circle('#circle-progress-1', {
       color: '#e8ecf1',
-      // This has to be the same size as the maximum width to
-      // prevent clipping
       strokeWidth: 10,
       trailWidth: 10,
       easing: 'easeInOut',
       duration: 1400,
       text: {
-        autoStyleContainer: false,
-        value: '<p class="circle-progress-value">74</p><p class="circle-progress-label">Expense</p>'
+          autoStyleContainer: false,
+          value: '<p class="circle-progress-value">' + totalRecords + '</p><p class="circle-progress-label">Buku Tamu</p>'
       }
-    });
+  });
 
     circle.path.setAttribute('stroke', '#1bdbe0');
     circle.path.setAttribute('stroke-width', 10);
@@ -106,15 +104,13 @@
 
     var circle2 = new ProgressBar.Circle('#circle-progress-2', {
       color: '#e8ecf1',
-      // This has to be the same size as the maximum width to
-      // prevent clipping
       strokeWidth: 10,
       trailWidth: 10,
       easing: 'easeInOut',
       duration: 1400,
       text: {
         autoStyleContainer: false,
-        value: '<p class="circle-progress-value">56</p><p class="circle-progress-label">Income</p>'
+        value: '<p class="circle-progress-value">'+ totalRecordPegawai +'</p><p class="circle-progress-label">Pegawai</p>'
       }
     });
 

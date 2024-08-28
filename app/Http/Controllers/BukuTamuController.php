@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\buku_tamu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\pegawai;
+use Carbon\Carbon;
 
 class BukuTamuController extends Controller
 {
@@ -13,8 +15,35 @@ class BukuTamuController extends Controller
      */
     public function dashboardView()
     {
-        $pegawai = DB::table('pegawai')->paginate(5);
-        return view('admin.dashboard', ['pegawai' => $pegawai]);
+        $buku = DB::table('buku_tamu')->paginate(5);
+
+        $count = DB::table('buku_tamu')->count();
+        $countPegawai = pegawai::all()->count();
+
+        $firstBT = buku_tamu::pluck('nama')->first();
+        $firstPegawai = pegawai::pluck('nama')->first();
+
+        //count weeks charts
+        // Get the current week start and end dates
+        $startOfWeek = now()->startOfWeek();
+        $endOfWeek = now()->endOfWeek();
+        
+        // Query to count records by day of the week
+        $records = DB::table('buku_tamu')
+            ->select(DB::raw('DAYNAME(created_at) as day_of_week'), DB::raw('COUNT(*) as total'))
+            ->whereBetween('created_at', [$startOfWeek, $endOfWeek])
+            ->groupBy('day_of_week')
+            ->orderBy(DB::raw('FIELD(day_of_week, "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")'))
+            ->pluck('total', 'day_of_week');
+
+        // Ensure the data has all days of the week, even if the count is zero
+        $daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        $data = array_fill_keys($daysOfWeek, 0);
+        foreach ($records as $day => $total) {
+            $data[$day] = $total;
+        }
+
+        return view('admin.dashboard', compact('buku', 'count', 'countPegawai', 'firstBT', 'firstPegawai', 'data'));
     }
 
     /**
@@ -22,7 +51,8 @@ class BukuTamuController extends Controller
      */
     public function create()
     {
-        return view('pegawai');
+        $buku = DB::table('buku_tamu')->paginate(10);
+        return view('admin.buku', compact('buku'));
     }
 
     /**

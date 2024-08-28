@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Stellar Admin</title>
+    <title>Buku Tamu - BPS Kota Bandar Lampung</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('vendors/simple-line-icons/css/simple-line-icons.css')}}">
     <link rel="stylesheet" href="{{ asset('vendors/flag-icon-css/css/flag-icons.min.css')}}">
@@ -27,7 +27,7 @@
             <div class="col-lg-4 mx-auto">
               <div class="auth-form-light text-left p-5">
                 <div class="brand-logo">
-                  <img src="{{ asset('images/bps.png')}}" style="padding-bottom: 15px">
+                  <img src="{{ asset('images/bps.png')}}" style="padding-bottom: 15px; width:230px;">
                   
                   @if (session()->has('success'))
                     <div class="alert alert-primary" role="alert">

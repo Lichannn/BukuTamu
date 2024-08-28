@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Stellar Admin</title>
+    <title>Buku Tamu - BPS Kota Bandar Lampung</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('vendors/simple-line-icons/css/simple-line-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('vendors/flag-icon-css/css/flag-icons.min.css')}}">
@@ -23,6 +23,11 @@
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="{{ asset('css/vertical-light-layout/style.css')}}">
+    <style>
+      td{
+        white-space: normal;
+      }
+    </style>
     <!-- End layout styles -->
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/773px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png" />
   </head>
@@ -33,7 +38,6 @@
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
           <a class="navbar-brand brand-logo" href="index.html">
             <img src="{{ asset('images/bps1.png')}}" alt="logo" class="logo-dark" style="height: 60px"/>
-            <img src="{{ asset('images/logo-light.svg')}}" alt="logo-light" class="logo-light">
           </a>
           <a class="navbar-brand brand-logo-mini" href="index.html"><img height="30" width="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/773px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png" alt="logo" /></a>
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -45,10 +49,10 @@
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
               <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="img-xs rounded-circle ms-2" src="{{ asset('images/faces/face8.jpg')}}" alt="Profile image"> <span class="font-weight-normal"> {{ Auth::user()->name }} </span></a>
+                <img class="img-xs rounded-circle ms-2" src="{{ asset('images/faces/face1.jpg')}}" alt="Profile image"> <span class="font-weight-normal"> {{ Auth::user()->name }} </span></a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
-                  <img class="img-md rounded-circle" src="{{ asset('images/faces/face8.jpg')}}" alt="Profile image">
+                  <img class="img-md rounded-circle" src="{{ asset('images/faces/face1.jpg')}}" alt="Profile image">
                   <p class="mb-1 mt-3">{{ Auth::user()->name }}</p>
                   <p class="font-weight-light text-muted mb-0">{{ Auth::user()->email }}</p>
                 </div>
@@ -70,7 +74,7 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav">
             <li class="nav-item navbar-brand-mini-wrapper">
-              <a class="nav-link navbar-brand brand-logo-mini" href="index.html"><img height="20" width="20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/773px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png" alt="logo" /></a>
+              <a class="nav-link navbar-brand brand-logo-mini" style="padding-top: 30px;" href="{{ route('dashboardView') }}"><img height="20" width="20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/773px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png" alt="logo" /></a>
             </li>
             <li class="nav-item nav-profile">
               <a href="#" class="nav-link">
@@ -97,7 +101,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#forms" aria-expanded="false" aria-controls="forms">
+              <a class="nav-link" href="{{route('Buku')}}" aria-expanded="false" aria-controls="forms">
                 <span class="menu-title">Buku Tamu</span>
                 <i class="icon-book-open menu-icon"></i>
               </a>

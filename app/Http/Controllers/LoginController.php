@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\MessageBag;
 
 use Illuminate\Http\Request;
 class LoginController extends Controller
@@ -43,7 +44,10 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             return redirect()->intended(route('dashboardView'));
         } 
-        return view('login');
+        return back()->withErrors([
+            'email' => ['The provided email does not exist.'],
+            'password' => ['The provided password is incorrect.'],
+        ]);
         
     }
 

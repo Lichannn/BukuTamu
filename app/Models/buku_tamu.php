@@ -18,7 +18,10 @@ class buku_tamu extends Model
         'prihal',
         'pekerjaan',
         'kesan',
+        'created_at',
     ];
 
     protected $table = 'buku_tamu';
+
+    protected $primaryKey = 'id_buku_tamu';
 }

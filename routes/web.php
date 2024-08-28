@@ -15,11 +15,14 @@ Route::middleware("auth")->group(function(){
         Route::get('admin/pegawai', [PegawaiController::class, 'index'])->name("pegawai");
         Route::get('admin/addpegawai', [PegawaiController::class, 'create'])->name("addPegawai");
         Route::post('admin/addpegawai-store', [PegawaiController::class, 'store'])->name("addPegawaiStore");
-        
+        //Route Edit Pegawai
         Route::get('admin/editpegawai/{id}', [PegawaiController::class, 'edit'])->name("editPegawai");
         Route::put('admin/editpegawai-update/{id}', [PegawaiController::class, 'update'])->name("editPegawaiUpdate");
-        
+        //Route Delete pegawai
         Route::delete('admin/deletepegawai/{id}', [PegawaiController::class, 'destroy'])->name("deletePegawai");
+        //Route Buku Tamu
+        Route::get('admin/buku/', [BukuTamuController::class, 'create'])->name("Buku");
+        
 });
 
 Route::get('/', function () {
