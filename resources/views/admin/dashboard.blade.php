@@ -31,14 +31,16 @@
                           <p class="mb-1">Buku Tamu</p>
                           <h6 class="mb-0">{{ $firstBT }}</h6>
                         </div>
-                        <div class="ms-auto"><span class="text-muted ms-2">Data Terbaru</span></div>
+                        <div style="margin-left: auto;
+                        align-content: center;"><span class="text-muted ms-2">Data Terbaru</span></div>
                       </div>
                       <div class="wrapper py-4 d-flex">
                         <div class="ms-3">
                           <p class="mb-1">Pegawai</p>
-                          <h6 class="mb-0"></h6>{{ $firstPegawai }}</h6>
+                          <h6 class="mb-0">{{ $firstPegawai }}</h6>
                         </div>
-                        <div class="ms-auto"><span class="text-muted ms-2">Data Terbaru</span></div>
+                        <div style="margin-left: auto;
+                        align-content: center;"><span class="text-muted ms-2">Data Terbaru</span></div>
                       </div>
                     </div>
                   </div>
@@ -58,10 +60,10 @@
                       <a type="button" class="btn px-0" href="{{ route('addPegawai') }}"> <i class="icon-user me-2"></i> Add Pegawai</a>
                     </div>
                     <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                      <a type="button" class="btn px-0" href=""><i class="icon-docs me-2"></i> Create Buku Tamu</a>
+                      <a type="button" class="btn px-0" href="{{ route('home') }}" target="_blank"><i class="icon-docs me-2"></i> Create Buku Tamu</a>
                     </div>
                     <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                      <a type="button" class="btn px-0" href=""><i class="icon-folder me-2"></i> Show All Buku Tamu</a>
+                      <a type="button" class="btn px-0" href="{{ route('Buku') }}"><i class="icon-folder me-2"></i> Show All Buku Tamu</a>
                     </div>
                     <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
                       <a type="button" class="btn px-0" href="{{ route('pegawai') }}"><i class="icon-book-open me-2"></i>Show All Pegawai</a>

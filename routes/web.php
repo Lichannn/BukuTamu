@@ -22,12 +22,17 @@ Route::middleware("auth")->group(function(){
         Route::delete('admin/deletepegawai/{id}', [PegawaiController::class, 'destroy'])->name("deletePegawai");
         //Route Buku Tamu
         Route::get('admin/buku/', [BukuTamuController::class, 'create'])->name("Buku");
+        //Route editBukuTamu
+        Route::get('admin/editbuku/{id}', [BukuTamuController::class, 'edit'])->name("editBuku");
+        Route::put('admin/editbuku-update/{id}', [BukuTamuController::class, 'update'])->name("editBukuUpdate");
+        //Route Delete Buku Tamu
+        Route::delete('admin/deletebuku/{id}', [BukuTamuController::class, 'destroy'])->name("deleteBuku");
         
 });
 
 Route::get('/', function () {
     return view('buku_tamu');
-});
+})->name('home');
 
 Route::post("/bukutamu", [BukuTamuController::class, 'store'])->name("addBT");
 

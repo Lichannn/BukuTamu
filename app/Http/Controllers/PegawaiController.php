@@ -83,7 +83,6 @@ class PegawaiController extends Controller
         ]);
         
         $pegawai = pegawai::where('id_pegawai', $id)->firstOrFail();
-        // dump($pegawai);
 
         $pegawai->nama = $request->nama;
         $pegawai->jabatan = $request->jabatan;

@@ -427,14 +427,14 @@
                             <label for="phone" class="formbold-form-label"> Kesan </label>
                         </div>
                         <div>
-                            <input
-                            type="text"
-                            name="prihal"
-                            id="Address"
-                            placeholder="Prihal"
-                            class="formbold-form-input"
-                            value="{{ old('prihal') }}"
-                            />
+                            <select name="prihal" id=""  class="formbold-form-input">
+                                <option value="{{ old('prihal') }}">{{ old('prihal') }}</option>
+                                <option value="Perpusatakaan Cetak">Perpusatakaan Cetak</option>
+                                <option value="Perpusatakaan Digital">Perpusatakaan Digital</option>
+                                <option value="Data Mikro">Data Mikro</option>
+                                <option value="Konsultasi Statistik">Konsultasi Statistik</option>
+                                <option value="Penjualan Softcopy/Hardcopy">Penjualan Softcopy/Hardcopy</option>
+                            </select>
                             @if ($errors->has('prihal'))
                             <div class="alert alert-danger" role="alert">
                                 {{ $errors->first('prihal') }}
@@ -492,15 +492,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left">
-                    <p class="mb-2"> <span class="ti-location-pin mr-2"></span> 1485 Pacific St, Brooklyn, NY 11216 USA</p>
+                    <p class="mb-2"> <span class="ti-location-pin mr-2"></span>  Jl. Sultan Syahril No.30, Pahoman, Engal, Kota Bandar Lampung</p>
                     <div class=" d-block d-sm-inline-block">
                         <p class="mb-2">
-                            <span class="ti-email mr-2"></span> <a class="mr-4" href="mailto:support@mobileapp.com">support@mobileapp.com</a>
+                            <span class="ti-email mr-2"></span> <a class="mr-4" href="mailto:bps1871@bps.go.id">bps1871@bps.go.id</a>
                         </p>
                     </div>
                     <div class="d-block d-sm-inline-block">
                         <p class="mb-0">
-                            <span class="ti-headphone-alt mr-2"></span> <a href="tel:51836362800">518-3636-2800</a>
+                            <span class="ti-headphone-alt mr-2"></span> <a href="https://wa.me/085281871871">+62-8528-1871-871</a>
                         </p>
                     </div>
 
@@ -509,7 +509,7 @@
                     <div class="social-icons">
                         <a href="#"><span class="ti-facebook"></span></a>
                         <a href="#"><span class="ti-twitter-alt"></span></a>
-                        <a href="#"><span class="ti-instagram"></span></a>
+                        <a href="https://instagram/bpskotabandarlampung"><span class="ti-instagram"></span></a>
                     </div>
                 </div>
             </div>
@@ -517,17 +517,6 @@
         </div>
 
     </div>
-    <!-- // end .section -->
-    <footer class="my-5 text-center">
-        <!-- Copyright removal is not prohibited! -->
-        <p class="mb-2"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED. MOBAPP TEMPLATE BY <a href="https://colorlib.com">COLORLIB</a></small></p>
-
-        <small>
-            <a href="#" class="m-2">PRESS</a>
-            <a href="#" class="m-2">TERMS</a>
-            <a href="#" class="m-2">PRIVACY</a>
-        </small>
-    </footer>
 
     <!-- jQuery and Bootstrap -->
     <script src="{{ asset('js/jquery-3.2.1.min.js')}}"></script>

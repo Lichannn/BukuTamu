@@ -20,8 +20,8 @@ class BukuTamuController extends Controller
         $count = DB::table('buku_tamu')->count();
         $countPegawai = pegawai::all()->count();
 
-        $firstBT = buku_tamu::pluck('nama')->first();
-        $firstPegawai = pegawai::pluck('nama')->first();
+        $firstBT = buku_tamu::orderBy('created_at', 'desc')->pluck('nama')->first();
+        $firstPegawai = pegawai::orderBy('created_at', 'desc')->pluck('nama')->first();
 
         //count weeks charts
         // Get the current week start and end dates
@@ -100,24 +100,53 @@ class BukuTamuController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(buku_tamu $bukuTamu)
+    public function edit($id)
     {
-        //
+        $buku = buku_tamu::where('id_buku_tamu', $id)->firstOrFail();
+        return view('admin.edit_buku', compact('buku'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, buku_tamu $bukuTamu)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255',
+            'no_tlp' => 'required|string|max:15',
+            'alamat' => 'required|string|max:255',
+            'kegiatan' => 'required|string|max:255',
+            'prihal' => 'required|string',
+            'pekerjaan' => 'required|string',
+            'kesan' => 'required|string',
+        ]);  
+        $bukuTamu = buku_tamu::where('id_buku_tamu', $id)->firstOrFail();
+        $bukuTamu->nama = $request->nama;
+        $bukuTamu->email = $request->email;
+        $bukuTamu->no_tlp = $request->no_tlp;
+        $bukuTamu->alamat = $request->alamat;
+        $bukuTamu->kegiatan = $request->kegiatan;
+        $bukuTamu->prihal = $request->prihal;
+        $bukuTamu->pekerjaan = $request->pekerjaan;
+        $bukuTamu->kesan = $request->kesan;
+        if($bukuTamu->update()){
+            return redirect(route('Buku'))->with('success', 'Data berhasil diubah');
+        } else{
+            return redirect(route('Buku'))->with('error', 'Data gagal diubah');
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(buku_tamu $bukuTamu)
+    public function destroy($id)
     {
-        //
+        $buku = buku_tamu::where('id_buku_tamu', $id)->firstOrFail();
+        if($buku->delete()){
+            return redirect(route('Buku'))->with('success', 'Data berhasil di Hapus');
+        }else{
+            return redirect(route('Buku'))->with('error', 'Data gagal di Hapus');
+        }
     }
 }

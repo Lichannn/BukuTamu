@@ -36,10 +36,10 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="index.html">
+          <a class="navbar-brand brand-logo" href="{{ route('dashboardView') }}">
             <img src="{{ asset('images/bps1.png')}}" alt="logo" class="logo-dark" style="height: 60px"/>
           </a>
-          <a class="navbar-brand brand-logo-mini" href="index.html"><img height="30" width="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/773px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="{{ route('dashboardView') }}"><img height="30" width="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/773px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png" alt="logo" /></a>
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="icon-menu"></span>
           </button>

@@ -49,8 +49,8 @@
                         <td>{{ $value->kesan }}</td>
                         <td>{{  \Carbon\Carbon::parse($value->created_at)->format('d, M Y') }}</td>
                         <td>
-                            <a href=""><div class="badge badge-primary p-2">Edit</div></a>
-                            <form action="" method="POST">
+                            <a href="{{ route('editBuku', $value->id_buku_tamu) }}"><div class="badge badge-primary p-2">Edit</div></a>
+                            <form action="{{ route('deleteBuku', $value->id_buku_tamu) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                             <button class="badge badge-danger p-2">Hapus</button>
