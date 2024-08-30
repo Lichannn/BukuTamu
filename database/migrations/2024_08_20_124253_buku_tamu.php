@@ -13,7 +13,7 @@ return new class extends Migration
     {
         if (!Schema::hasTable('buku_tamu')) {
             Schema::create('buku_tamu', function (Blueprint $table) {
-                $table->bigIncrements('id_buku-tamu');
+                $table->bigIncrements('id_buku_tamu');
                 $table->string('nama');
                 $table->string('email');
                 $table->char('no_tlp', length: 14);
@@ -32,14 +32,10 @@ return new class extends Migration
                 $table->string('nama');
                 $table->string('jabatan');
                 $table->string('pekerjaan');
-                $table->string('foto');
+                $table->string('foto')->nullable();
                 $table->timestamps();
             });
         }
-
-        Schema::table('buku_tamu', function (Blueprint $table) {
-            $table->string('foto')->nullable();
-        });
     }
 
     /**

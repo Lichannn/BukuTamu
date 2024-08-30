@@ -69,7 +69,7 @@
 
             <div class="section-title">
                 <small>HIGHLIGHTS</small>
-                <h3>Features you love</h3>
+                <h3>Fitur Unggulan</h3>
             </div>
 
 
@@ -80,8 +80,8 @@
                             <div class="media">
                                 <span class="ti-face-smile gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
-                                    <h4 class="card-title">Simple</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque </p>
+                                    <h4 class="card-title">Mudah Digunakan</h4>
+                                    <p class="card-text">Akses informasi statistik yang Anda butuhkan dengan mudah melalui antarmuka yang sederhana dan intuitif. Data yang tersedia di website kami dirancang agar dapat diakses oleh berbagai kalangan, dari masyarakat umum hingga profesional.</p>
                                 </div>
                             </div>
                         </div>
@@ -93,8 +93,8 @@
                             <div class="media">
                                 <span class="ti-settings gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
-                                    <h4 class="card-title">Customize</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque </p>
+                                    <h4 class="card-title">Kustomisasi Data</h4>
+                                    <p class="card-text">Sesuaikan pencarian dan tampilan data statistik sesuai kebutuhan Anda. Kami menyediakan berbagai alat dan fitur untuk mempermudah analisis data sesuai dengan preferensi Anda, sehingga Anda bisa mendapatkan informasi yang relevan dan tepat sasaran.</p>
                                 </div>
                             </div>
                         </div>
@@ -106,8 +106,8 @@
                             <div class="media">
                                 <span class="ti-lock gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
-                                    <h4 class="card-title">Secure</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque </p>
+                                    <h4 class="card-title">Keamanan Terjamin</h4>
+                                    <p class="card-text">Keamanan data adalah prioritas utama kami. Seluruh data yang kami sediakan melalui website ini dilindungi dengan standar keamanan tinggi untuk memastikan informasi yang Anda akses tetap aman dan terpercaya.</p>
                                 </div>
                             </div>
                         </div>
@@ -148,16 +148,11 @@
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="communication">
                     <div class="d-flex flex-column flex-lg-row">
-                        <img src="{{ asset('images/graphic.png')}}" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                         <div>
 
-                            <h2>Communicate with ease</h2>
-                            <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                                congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                            </p>
-                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-                                sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
+                            <h2>Memfasilitasi Komunikasi Data</h2>
+                            <p class="lead">Akses dan bagikan data statistik dengan mudah, tepat, dan efisien.</p>
+                            <p>BPS Kota Bandar Lampung menyediakan saluran komunikasi yang mulus untuk memperoleh dan mendistribusikan data statistik penting. Platform kami memastikan Anda tetap mendapatkan informasi terbaru dan laporan terkini, sehingga mendukung transparansi dan pengambilan keputusan yang berdasarkan data. Baik Anda melakukan penelitian, merencanakan proyek pembangunan, atau menganalisis tren, layanan kami dirancang untuk memenuhi kebutuhan komunikasi data Anda.
                             </p>
                         </div>
                     </div>
@@ -165,29 +160,19 @@
                 <div class="tab-pane fade" id="schedule">
                     <div class="d-flex flex-column flex-lg-row">
                         <div>
-                            <h2>Scheduling when you want</h2>
-                            <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                                congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                            </p>
-                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-                                sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
+                            <h2>Jadwalkan Sesuai Kebutuhan Anda</h2>
+                            <p class="lead">Memanfaatkan layanan statistik dengan fleksibilitas penuh kapan saja Anda butuhkan.</p>
+                            <p>BPS Kota Bandar Lampung menyediakan layanan penjadwalan data yang memungkinkan Anda mengatur akses ke informasi penting sesuai dengan jadwal dan kebutuhan Anda. Dengan dukungan penuh dari tim kami, Anda dapat merencanakan dan mengkoordinasikan kegiatan analisis data, survei, dan laporan dengan lebih efektif. Kami hadir untuk memastikan setiap kebutuhan statistik Anda terpenuhi dengan akurasi dan tepat waktu.
                             </p>
                         </div>
-                        <img src="{{ asset('images/graphic.png')}}" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                     </div>
                 </div>
                 <div class="tab-pane fade" id="messages">
                     <div class="d-flex flex-column flex-lg-row">
-                        <img src="{{ asset('images/graphic.png')}}" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                         <div>
-                            <h2>Realtime Messaging service</h2>
-                            <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                                congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                            </p>
-                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-                                sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
+                            <h2>Layanan Data Statistik</h2>
+                            <p class="lead">Tingkatkan pengambilan keputusan dengan data dan wawasan yang komprehensif.</p>
+                            <p>Badan Pusat Statistik (BPS) Kota Bandar Lampung menawarkan berbagai layanan data, termasuk statistik real-time, analisis demografis, dan laporan ekonomi. Layanan kami dirancang untuk mendukung kebutuhan pemerintah, bisnis, dan penelitian akademis. Akses data yang andal untuk memperkuat perencanaan strategis dan pengembangan kebijakan.
                             </p>
                         </div>
                     </div>
@@ -195,16 +180,11 @@
                 <div class="tab-pane fade" id="livechat">
                     <div class="d-flex flex-column flex-lg-row">
                         <div>
-                            <h2>Live chat when you needed</h2>
-                            <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                                congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                            </p>
-                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-                                sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
+                            <h2>Live Chat BPS Kota Bandar Lampung</h2>
+                            <p class="lead">Dapatkan informasi statistik dengan cepat melalui layanan Live Chat kami.</p>
+                            <p>Badan Pusat Statistik (BPS) Kota Bandar Lampung menyediakan layanan Live Chat untuk membantu Anda mendapatkan data dan informasi statistik secara langsung. Tim kami siap menjawab pertanyaan Anda seputar data ekonomi, demografi, sosial, dan lainnya. Manfaatkan layanan ini untuk memenuhi kebutuhan data Anda dengan lebih efektif.
                             </p>
                         </div>
-                        <img src="{{ asset('images/graphic.png"')}} alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                     </div>
                 </div>
             </div>
@@ -225,22 +205,29 @@
                         <li class="media">
                             <div class="circle-icon mr-4">1</div>
                             <div class="media-body">
-                                <h5>Create an Account</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem </p>
+                                <h5>Pengunjung/Tamu Datang</h5>
+                                <p>Pengunjung atau tamu datang ke lokasi dan menyampaikan maksud kunjungan kepada resepsionis untuk mendapatkan informasi atau layanan yang dibutuhkan.</p>
                             </div>
                         </li>
                         <li class="media my-4">
                             <div class="circle-icon mr-4">2</div>
                             <div class="media-body">
-                                <h5>Share with friends</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem eveniet</p>
+                                <h5>Resepsionis</h5>
+                                <p>Resepsionis menyambut pengunjung atau tamu, memberikan informasi yang diperlukan, dan mengarahkan mereka untuk mengisi buku tamu serta menentukan layanan yang diinginkan.</p>
                             </div>
                         </li>
                         <li class="media">
                             <div class="circle-icon mr-4">3</div>
                             <div class="media-body">
-                                <h5>Enjoy your life</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem </p>
+                                <h5>Mengisi Buku Tamu dan Menentukan Pilihan</h5>
+                                <p>Pengunjung atau tamu mengisi buku tamu dengan data diri serta memilih layanan atau tujuan yang sesuai dengan kebutuhan mereka.</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-icon mr-4">4</div>
+                            <div class="media-body">
+                                <h5>Pengunjung/Tamu Pulang</h5>
+                                <p>Setelah mendapatkan layanan atau informasi yang dibutuhkan, pengunjung atau tamu menyelesaikan kunjungan dan meninggalkan lokasi.</p>
                             </div>
                         </li>
                     </ul>
@@ -251,43 +238,6 @@
 
     </div>
     <!-- // end .section -->
-
-
-    <div class="section">
-        <div class="container">
-            <div class="section-title">
-                <small>TESTIMONIALS</small>
-                <h3>What our Customers Says</h3>
-            </div>
-
-            <div class="testimonials owl-carousel">
-                <div class="testimonials-single">
-                    <img src="{{ asset('images/client.png')}}" alt="client" class="client-img">
-                    <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
-                    <h5 class="mt-4 mb-2">Crystal Gordon</h5>
-                    <p class="text-primary">United States</p>
-                </div>
-                <div class="testimonials-single">
-                    <img src="{{ asset('images/client.png')}}" alt="client" class="client-img">
-                    <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
-                    <h5 class="mt-4 mb-2">Crystal Gordon</h5>
-                    <p class="text-primary">United States</p>
-                </div>
-                <div class="testimonials-single">
-                    <img src="{{ asset('images/client.png')}}" alt="client" class="client-img">
-                    <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
-                    <h5 class="mt-4 mb-2">Crystal Gordon</h5>
-                    <p class="text-primary">United States</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- // end .section -->
-
-
-
     <div class="section pt-0">
         <div class="container">
             <div class="section-title">
@@ -297,17 +247,17 @@
 
             <div class="row pt-4">
                 <div class="col-md-6">
-                    <h4 class="mb-3">Can I try before I buy?</h4>
-                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
-                    <h4 class="mb-3">What payment methods do you accept?</h4>
-                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
+                    <h4 class="mb-3">Apakah saya bisa mendapatkan data sampel terlebih dahulu?</h4>
+                    <p class="light-font mb-5">L Anda dapat mengakses data sampel yang tersedia di portal resmi BPS Kota Bandar Lampung sebelum memutuskan untuk membeli data lengkap. Data ini memberikan gambaran umum tentang jenis informasi yang tersedia.</p>
+                    <h4 class="mb-3">Apakah saya bisa mengubah layanan saya nanti?</h4>
+                    <p class="light-font mb-5">Ya, Anda dapat menyesuaikan layanan yang Anda pilih sesuai dengan kebutuhan Anda. Silakan hubungi kami untuk informasi lebih lanjut tentang cara mengubah atau memperbarui layanan data Anda.</p>
 
                 </div>
                 <div class="col-md-6">
-                    <h4 class="mb-3">Can I change my plan later?</h4>
-                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
-                    <h4 class="mb-3">Do you have a contract?</h4>
-                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
+                    <h4 class="mb-3">Fitur apa saja yang ditawarkan oleh Badan Pusat Statistik Kota Bandar Lampung?</h4>
+                    <p class="light-font mb-5">BPS Kota Bandar Lampung menyediakan berbagai fitur seperti akses ke data statistik terkini, layanan konsultasi data, dan sistem informasi geografis (SIG) yang dapat membantu dalam analisis data. Kami juga menawarkan layanan survei dan sensus yang disesuaikan dengan kebutuhan spesifik Anda.</p>
+                    <h4 class="mb-3">Apakah ada kontrak yang harus saya tanda tangani?</h4>
+                    <p class="light-font mb-5">Untuk layanan data tertentu, mungkin diperlukan kontrak untuk memastikan penggunaan data sesuai dengan ketentuan BPS. Hubungi tim kami untuk mengetahui apakah layanan yang Anda pilih memerlukan kontrak.</p>
 
                 </div>
             </div>
