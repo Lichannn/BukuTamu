@@ -16,12 +16,9 @@
     <!-- Themify Icons -->
     <link rel="stylesheet" href="{{ asset('css/themify-icons.css')}}">
     <!-- Owl carousel -->
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}">
     <!-- Main css -->
     <link href="{{ asset('css/style.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('vendors/select2/select2.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('vendors/select2-bootstrap-theme/select2-bootstrap.min.css') }}">
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -43,7 +40,7 @@
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item"> <a class="nav-link active" href="#home">HOME <span class="sr-only">(current)</span></a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#features">FEATURES</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#contact">GUEST BOOK</a> </li>
                             </ul>
                         </div>
                     </nav>
@@ -280,9 +277,40 @@
                   <form action="{{ route('addBT') }}" method="POST">
                     @csrf
                     @if (session()->has('success'))
-                    <div class="alert alert-primary" role="alert">
-                        {{ session()->get('success') }}
-                    </div>
+                    {{-- <div class="alert alert-primary" role="alert">
+                        <script>alert("{{ session()->get('success') }}")</script>
+                    </div> --}}
+                    <!-- Button trigger modal -->
+                        <script>    // Use JavaScript/jQuery to show the modal automatically
+                            document.addEventListener("DOMContentLoaded", function() {
+                                $('#exampleModalCenter').modal('show');
+                            });
+                        </script>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body">    
+                                    <div class="d-flex justify-content-center">
+                                        <div class="content text-center">
+                                            <div class="ratings">
+                                                <span class="product-rating">Seberapa Puas Anda Terhadap Pelayanan Kami</span>
+                                                <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                                                </div>
+                                                <div class="rating-text">       
+                                                    <span>Berikan Penilaian Terhadap Pelayanan Kami</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     @endif
                     @if (session()->has('error'))
                     <div class="alert alert-primary" role="alert">
@@ -295,7 +323,6 @@
                             type="text"
                             name="nama"
                             id="firstname"
-                            placeholder="Jane"
                             class="formbold-form-input"
                             value="{{ old('nama') }}"
                             />
@@ -304,14 +331,13 @@
                                 {{ $errors->first('nama') }}
                             </div>
                             @endif
-                            <label for="firstname" class="formbold-form-label"> Nama Depan </label>
+                            <label for="firstname" class="formbold-form-label"> Nama </label>
                         </div>
                         <div>
                             <input
                             type="email"
                             name="email"
                             id="email"
-                            placeholder="bps1871@mail.com"
                             class="formbold-form-input"
                             value="{{ old('email') }}"
                             />
@@ -330,7 +356,6 @@
                             type="number"
                             name="no_tlp"
                             id="phone"
-                            placeholder="+62"
                             class="formbold-form-input"
                             value="{{ old('no_tlp') }}"
                             />
@@ -346,7 +371,6 @@
                             type="text"
                             name="alamat"
                             id="Address"
-                            placeholder="Alamat"
                             class="formbold-form-input"
                             value="{{ old('alamat') }}"
                             />
@@ -365,7 +389,6 @@
                             type="text"
                             name="kesan"
                             id="Address"
-                            placeholder="kesan"
                             class="formbold-form-input"
                             value="{{ old('kesan') }}"
                             />
@@ -399,7 +422,6 @@
                             type="text"
                             name="pekerjaan"
                             id="Address"
-                            placeholder="pekerjaan"
                             class="formbold-form-input"
                             value="{{ old('pekerjaan') }}"
                             />
@@ -459,7 +481,7 @@
                     <div class="social-icons">
                         <a href="#"><span class="ti-facebook"></span></a>
                         <a href="#"><span class="ti-twitter-alt"></span></a>
-                        <a href="https://instagram/bpskotabandarlampung"><span class="ti-instagram"></span></a>
+                        <a href="https://instagram.com/bpsbandarlampung" target="_blank"><span class="ti-instagram"></span></a>
                     </div>
                 </div>
             </div>
@@ -471,9 +493,9 @@
     <!-- jQuery and Bootstrap -->
     <script src="{{ asset('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{ asset('vendors/select2/select2.min.js')}}"></script>
+    <script src="https://kit.fontawesome.com/f78db6a183.js" crossorigin="anonymous"></script>
+
     <!-- Plugins JS -->
-    <script src="{{ asset('js/owl.carousel.min.js')}}"></script>
     <!-- Custom JS -->
     <script src="{{ asset('js/script.js')}}"></script>
 

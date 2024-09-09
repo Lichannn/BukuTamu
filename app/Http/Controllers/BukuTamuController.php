@@ -60,6 +60,7 @@ class BukuTamuController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'nama' => 'required|string|max:255',
             'email' => 'required|string|email|max:255',

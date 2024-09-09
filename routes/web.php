@@ -30,9 +30,7 @@ Route::middleware("auth")->group(function(){
         
 });
 
-Route::get('/', function () {
-    return view('buku_tamu');
-})->name('home');
+Route::get('/', function () {return view('buku_tamu');})->name('home');
 
 Route::post("/bukutamu", [BukuTamuController::class, 'store'])->name("addBT");
 
