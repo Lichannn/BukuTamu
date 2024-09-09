@@ -9,8 +9,8 @@ use App\Http\Controllers\PegawaiController;
 Route::middleware("auth")->group(function(){
         //Route dashboard
         Route::get('admin/', [BukuTamuController::class, 'dashboardView'])->name("dashboardView");
-        Route::get('admin/register', [LoginController::class, 'registerView'])->name("register"); 
-        Route::post('admin/register', [LoginController::class, 'registerPost'])->name("registerPost"); 
+        Route::get('/register', [LoginController::class, 'registerView'])->name("register"); 
+        Route::post('/register', [LoginController::class, 'registerPost'])->name("registerPost"); 
         //Route Pegawai
         Route::get('admin/pegawai', [PegawaiController::class, 'index'])->name("pegawai");
         Route::get('admin/addpegawai', [PegawaiController::class, 'create'])->name("addPegawai");

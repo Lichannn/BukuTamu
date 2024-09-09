@@ -40,9 +40,9 @@ class PegawaiController extends Controller
         $pegawai->jabatan = $request->jabatan;
         $pegawai->pekerjaan = $request->pekerjaan;
         if (!empty($request->foto)) {
-            $imageName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('images/'), $imageName);
-            $pegawai->foto = 'images/faces/'.$imageName;
+            $imageName = time().'.'.$request->foto->extension();
+            $request->foto->move(public_path('images/faces'), $imageName);
+            $pegawai->foto = $imageName;
         }else{
             $pegawai->foto = 'face1.jpg';
         }
@@ -89,9 +89,9 @@ class PegawaiController extends Controller
         $pegawai->pekerjaan = $request->pekerjaan;
 
         if (!empty($request->foto)) {
-            $imageName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('images/'), $imageName);
-            $pegawai->foto = 'images/faces/'.$imageName;
+            $imageName = time().'.'.$request->foto->extension();
+            $request->foto->move(public_path('images/faces'), $imageName);
+            $pegawai->foto = $imageName;
         }else{
             $pegawai->foto = 'face1.jpg';
         }

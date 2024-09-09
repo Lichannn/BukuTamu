@@ -53,7 +53,7 @@
                       </div>
                     @endif
                   <label>File upload Poto</label>
-                  <input type="file" name="foto">
+                  <input type="file" name="foto" >
                 </div>
                 <button type="submit" class="btn btn-primary me-2">Submit</button>
                 <a class="btn btn-light" href="{{route('pegawai')}}">Cancel</a>
