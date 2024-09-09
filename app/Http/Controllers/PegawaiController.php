@@ -34,6 +34,7 @@ class PegawaiController extends Controller
             'nama' => 'required|string|max:255',
             'jabatan' => 'required|string|max:255',
             'pekerjaan' => 'required|string',
+            'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
         $pegawai = new pegawai();
         $pegawai->nama = $request->nama;
@@ -80,6 +81,7 @@ class PegawaiController extends Controller
             'nama' => 'required|string|max:255',
             'jabatan' => 'required|string|max:255',
             'pekerjaan' => 'required|string',
+            'foto' => 'image|mimes:jpeg,png,jpg|max:2048',
         ]);
         
         $pegawai = pegawai::where('id_pegawai', $id)->firstOrFail();
