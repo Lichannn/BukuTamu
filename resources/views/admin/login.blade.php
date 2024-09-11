@@ -83,7 +83,6 @@
     <script src="{{ asset('js/hoverable-collapse.js')}}"></script>
     <script src="{{ asset('js/misc.js')}}"></script>
     <script src="{{ asset('js/settings.js')}}"></script>
-    <script src="{{ asset('js/todolist.js')}}"></script>
     <!-- endinject -->
   </body>
 </html>

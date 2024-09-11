@@ -271,8 +271,6 @@
             </div>
 
             <div class="formbold-main-wrapper">
-                <!-- Author: FormBold Team -->
-                <!-- Learn More: https://formbold.com -->
                 <div class="formbold-form-wrapper">
                   <form action="{{ route('addBT') }}" method="POST">
                     @csrf
@@ -281,7 +279,7 @@
                         <script>alert("{{ session()->get('success') }}")</script>
                     </div> --}}
                     <!-- Button trigger modal -->
-                        <script>    // Use JavaScript/jQuery to show the modal automatically
+                        <script>
                             document.addEventListener("DOMContentLoaded", function() {
                                 $('#exampleModalCenter').modal('show');
                             });
@@ -305,15 +303,14 @@
                                     </div> 
                                 </div>
                                 <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Beri Nilai</button>
                                 </div>
                             </div>
                             </div>
                         </div>
                     @endif
                     @if (session()->has('error'))
-                    <div class="alert alert-primary" role="alert">
+                    <div class="alert alert-danger" role="alert">
                         {{ session()->get('error') }}
                     </div>
                     @endif

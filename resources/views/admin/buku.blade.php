@@ -13,12 +13,13 @@
                 </div>
                 @endif
                 @if (session()->has('error'))
-                <div class="alert alert-primary" role="alert">
+                <div class="alert alert-danger" role="alert">
                     <strong>{{ session()->get('error') }}</strong>
                 </div>
                 @endif
               <div class="d-sm-flex align-items-center mb-4">
                 <h4 class="card-title mb-sm-0">Data Buku Tamu</h4>
+                <a class="btn btn-primary text-dark ms-auto mb-3 mb-sm-0" href="{{ route('download') }}">Download Tamplate Buku Tamu</a>
               </div>
               <div class="table-responsive border rounded p-1">
                 <table class="table">

@@ -14,10 +14,7 @@
     <link rel="stylesheet" href="{{ asset('vendors/font-awesome/css/font-awesome.min.css')}}" />
     <link rel="stylesheet" href="{{ asset('vendors/bootstrap-datepicker/bootstrap-datepicker.min.css')}}">
     <link rel="stylesheet" href="{{ asset('vendors/jvectormap/jquery-jvectormap.css')}}">
-    <link rel="stylesheet" href="{{ asset('vendors/daterangepicker/daterangepicker.css')}}">
     <link rel="stylesheet" href="{{ asset('vendors/chartist/chartist.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('vendors/select2/select2.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('vendors/select2-bootstrap-theme/select2-bootstrap.min.css')}}">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->

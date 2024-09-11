@@ -27,6 +27,9 @@ Route::middleware("auth")->group(function(){
         Route::put('admin/editbuku-update/{id}', [BukuTamuController::class, 'update'])->name("editBukuUpdate");
         //Route Delete Buku Tamu
         Route::delete('admin/deletebuku/{id}', [BukuTamuController::class, 'destroy'])->name("deleteBuku");
+
+        //download tamplate buku tamu
+        Route::get('admin/downloadbuku',[BukuTamuController::class, 'download'])->name("download");
         
 });
 

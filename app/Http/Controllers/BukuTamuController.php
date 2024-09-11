@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\pegawai;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 
 class BukuTamuController extends Controller
 {
@@ -93,9 +94,15 @@ class BukuTamuController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(buku_tamu $bukuTamu)
+    public function download()
     {
-        //
+        $filePath = public_path('images/DAFTAR TAMU BPS KOTA BANDAR LAMPUNG.docx');
+     
+        if (Storage::exists($filePath)) {
+            return response()->download($filePath);
+        }else{
+            return redirect()->route('Buku')->with('error', 'File not found');
+        }
     }
 
     /**
