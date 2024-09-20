@@ -22,9 +22,9 @@
                 <a class="btn btn-primary text-dark ms-auto mb-3 mb-sm-0" href="{{ route('download') }}">Download Tamplate Buku Tamu</a>
               </div>
               <div class="table-responsive border rounded p-1">
-                <table class="table">
+                <table class="table table-bordered table-hover">
                   <thead>
-                    <tr>
+                    <tr class="table-primary ">
                       <th class="font-weight-bold">Nama</th>
                       <th class="font-weight-bold">Email</th>
                       <th class="font-weight-bold">Telpon</th>
@@ -32,7 +32,7 @@
                       <th class="font-weight-bold">Kegiatan</th>
                       <th class="font-weight-bold">Prihal</th>
                       <th class="font-weight-bold">Pekerjaan</th>
-                      <th class="font-weight-bold">Kesan</th>
+                      <th class="font-weight-bold">Kesan</th> 
                       <th class="font-weight-bold">Tanggal Datang</th>
                       <th class="font-weight-bold">Aksi</th>
                     </tr>

@@ -52,7 +52,7 @@ class BukuTamuController extends Controller
      */
     public function create()
     {
-        $buku = DB::table('buku_tamu')->paginate(10);
+        $buku = DB::table('buku_tamu')->orderBy('created_at', 'desc')->paginate(10);
         return view('admin.buku', compact('buku'));
     }
 
@@ -91,9 +91,6 @@ class BukuTamuController extends Controller
         return redirect()->route('dashboard')->with('success', 'Data berhasil disimpan');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function download()
     {
         $filePath = public_path('images/DAFTAR TAMU BPS KOTA BANDAR LAMPUNG.docx');
